@@ -1,0 +1,556 @@
+/* ------------------------ GENERAL RESET ------------------------ */
+body, h1, h2, h3, p, table {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9f4;
+  color: #333;
+  font-size: 100%; /* base font-size for text scaling */
+  line-height: 1.5;
+}
+
+/* ------------------------ HEADER ------------------------ */
+header {
+  background: #7A8A5A;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+/* ------------------------ HEADER TITLES ------------------------ */
+.header-titles {
+  text-align: center;
+  margin-top: 0; /* default desktop */
+}
+
+/* Base styles for title and department line */
+#title, #deptLine {
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+/* NEW RESPONSIVE FONT SIZES - same structure for both */
+#title {
+  font-size: 1.6rem; /* desktop */
+}
+
+#deptLine {
+  font-size: 1.6rem; /* match title */
+  font-weight: 500;
+}
+
+/* ------------------------ HEADER TITLES ------------------------ */
+.header-titles {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center with logos */
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+/* ------------------------ HEADER TITLES AND LOGO ALIGNMENT ------------------------ */
+.header-bar {
+  display: flex;
+  align-items: center; /* vertically align logos and titles */
+  justify-content: space-between; /* spread left logo, text, right logo */
+  flex-wrap: nowrap;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  flex: 1; /* take up remaining space between logos */
+  margin: 0 10px;
+  text-align: center;
+}
+
+.logo {
+  width: 110px;        
+  height: 110px;       
+  object-fit: cover;
+  border-radius: 20%; 
+  position: absolute;
+  top: 20px;
+  z-index: 30;
+}
+
+.logo.left { left: 25px; }
+.logo.right { right: 25px; z-index: 30; }
+
+/* MOBILE LOGO SIZES */
+@media screen and (max-width: 600px) {
+  .header-bar {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .logo.left, .logo.right {
+    width: 60px;
+    height: 60px;
+    top: 0;
+  }
+
+  .header-titles {
+    flex-direction: column;
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo.left, .logo.right {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* 🌿 Elegant and visible boho heading */
+#templateHeader {
+  font-family: 'Georgia', serif;
+  font-size: 0.5rem;
+  text-align: center;
+  margin: 25px 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.3;
+  position: relative;
+  color: #3E7C59; 
+  background: linear-gradient(90deg, #3E7C59 0%, #A67B5B 50%, #8B5E3C 100%);
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  animation: fadeSlideIn 1.5s ease-in-out;
+  border-radius: 6px;
+  padding: 10px 15px;
+  display: inline-block;
+  background-color: #f4f1ee; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌾 Decorative underline */
+#templateHeader::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(to right, #3E7C59, #A67B5B);
+  margin: 10px auto 0;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+/* 🌸 Smooth entry animation */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------ SUBTITLE AND CONTROLS CONTAINER ------------------------ */
+.subtitle-controls-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 20px;
+  width: 100%;
+  gap: 20px;
+}
+
+#subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 500;
+  margin: 0;
+  grid-column: 2;
+  justify-self: center;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.06);
+  padding: 6px 15px;
+  border-radius: 8px;
+  min-width: max-content;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  grid-column: 3;
+  justify-self: end;
+}
+
+/* ------------------------ MEDIA QUERIES FOR RESPONSIVENESS ------------------------ */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  #title, #deptLine { font-size: 1.4rem; }
+  .subtitle-controls-container { padding: 0 15px; gap: 15px; }
+  #subtitle { font-size: 0.9rem; max-width: 400px; }
+  .lang-selector { padding: 5px 10px; font-size: 0.9rem; }
+  .size-btn { font-size: 0.8rem; padding: 2px 6px; min-width: 18px; }
+}
+
+@media screen and (max-width: 600px) and (min-width: 481px) {
+  #title, #deptLine { font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 480px) and (min-width: 361px) {
+  #title, #deptLine { font-size: 1rem; }
+  .subtitle-controls-container { padding: 0 10px; gap: 8px; }
+  #subtitle { font-size: 0.75rem; max-width: 250px; }
+  .lang-selector { padding: 4px 8px; font-size: 0.8rem; }
+  .size-btn { font-size: 0.7rem; padding: 2px 4px; min-width: 16px; }
+  .lang-selector label { margin: 0 6px; font-size: 0.8rem; }
+}
+
+@media screen and (max-width: 400px) and (min-width: 361px) {
+  #title, #deptLine { font-size: 0.9rem; }
+}
+
+@media screen and (max-width: 360px) {
+  #title, #deptLine { font-size: 0.8rem; color: white; }
+  .subtitle-controls-container { padding: 0 8px; gap: 6px; }
+  #subtitle { font-size: 0.7rem; max-width: 200px; }
+  .lang-selector { padding: 3px 6px; font-size: 0.7rem; }
+  .size-btn { font-size: 0.6rem; padding: 1px 3px; min-width: 14px; }
+  .lang-selector label { margin: 0 4px; font-size: 0.7rem; }
+}
+
+/* ------------------------ LANGUAGE SELECTOR ------------------------ */
+.lang-selector label {
+  margin: 0 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 600;
+}
+
+/* ------------------------ TEXT SIZE BUTTONS ------------------------ */
+.text-size-controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-btn {
+  background: rgba(255,255,255,0.08);
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 0px 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1;
+  min-width: 20px;
+}
+
+.size-btn:hover { background: rgba(255,255,255,0.12); }
+
+/* ------------------------ CONTAINER ------------------------ */
+.container {
+  max-width: none;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px auto 0;
+}
+
+/* ------------------------ CARDS ------------------------ */
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-image img {
+  width: 20%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.info-card, .schedule-card, .awareness {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 10px; 
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.info-card:hover, .schedule-card:hover, .awareness:hover { 
+  transform: scale(1.01); 
+}
+/* Layout for schedule card with image on the right */
+.schedule-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #f4f8ef;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner content container */
+.schedule-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Text section */
+.schedule-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Image section */
+.schedule-image {
+  flex: 0 0 150px;
+  text-align: right;
+}
+
+.schedule-image img {
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .schedule-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .schedule-image {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .schedule-image img {
+    width: 100px;
+  }
+}
+/* Awareness card with image on the right */
+.awareness {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #f4f8ef;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner content container */
+.awareness-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Text section */
+.awareness-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Image section */
+.awareness-image {
+  flex: 0 0 150px;
+  text-align: right;
+}
+
+.awareness-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .awareness-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .awareness-image {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .awareness-image img {
+    width: 100px;
+  }
+}
+
+/* ------------------------ TABLE ------------------------ */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.info-table th, .info-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.info-table th { background-color: #6E7B4F; color: white; }
+.info-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+/* ------------------------ FOOTER ------------------------ */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #d0d7ad;
+  color: #555;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 19px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1 1 30%;
+  min-width: 200px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 { color: #3C432C; margin-bottom: 8px; }
+
+/* ------------------------ SOCIAL ICONS ------------------------ */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-link {
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-link:hover { transform: scale(1.1); color: #0077b6; }
+.social-icon { width: 24px; height: 24px; }
+
+/* ------------------------ HEADER LOGOS ------------------------ */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header-container {
+  flex: 1 1 auto;
+  text-align: center;
+  max-width: 880px;
+  margin: 0 80px; 
+  padding: 0 10px;
+}
+
+/* ------------------------ TEMPLATE HEADER ------------------------ */
+.nav-secondary { margin-top: 6px; }
+
+#templateHeader {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #033107;
+  text-align: center;
+  margin: 0 auto;
+  padding: 4px 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* ------------------------ HAMBURGER MENU ------------------------ */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  z-index: 50;
+}
+
+/* ------------------------ MOBILE RESPONSIVE ------------------------ */
+@media screen and (max-width: 600px) {
+  .header-bar { flex-direction: column; position: relative; gap: 10px; text-align: center; }
+  .header-bar .logo { position: absolute; top: 10px; }
+  .logo.left { left: 10px; }
+  .logo.right { right: 10px; }
+  
+  .nav-secondary h3 { font-size: 1em; }
+  
+  .text-size-controls { justify-content: center; margin-bottom: 5px; margin-top: 15px; }
+  .info-table th, .info-table td { padding: 6px; font-size: 0.85rem; }
+  .schedule-card, .awareness, .info-card { padding: 12px; margin: 10px 0; }
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer-column { min-width: 100%; }
+  .social-icon { width: 22px; height: 22px; }
+}

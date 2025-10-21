@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Temple Solid Waste Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <img src="csmc logo.png" alt="CSMC logo" class="logo left" />
+  </div>
+
+  <!-- Header Titles Section -->
+  <div class="header-titles">
+    <h1 id="title">छत्रपती संभाजीनगर महानगरपालिका</h1>
+    <h1 id="deptLine">घनकचरा व्यवस्थापन विभाग</h1>
+  </div>
+
+  <!-- Collapsible Nav / Template Section -->
+  <div class="template-section" id="navCollapsible">
+    <div class="nav-secondary">
+      <h3 id="templateHeader">🌿 मंदिर निर्माल्य व्यवस्थापन 🌿</h3>
+      
+    <img src="ascdcl logo.png" alt="ASCDCL logo" class="logo right" />
+  </div>
+    </div>
+    </header>
+     
+    <!-- Language & Text Size Selector -->
+    <div class="subtitle-controls-container">
+      <p id="subtitle">फुलं, पाने आणि नैवेद्य यांसारख्या मंदिर कचऱ्याचे शाश्वत व्यवस्थापन</p>
+      <section class="lang-selector">
+        <div class="text-size-controls" aria-hidden="false">
+          <button id="increaseBtn" class="size-btn" aria-label="Increase text">अ+</button>
+          <button id="decreaseBtn" class="size-btn" aria-label="Decrease text">अ-</button>
+        </div>
+        <label>
+          <input type="radio" name="language" value="en" /> <span class="lang-label">English</span>
+        </label>
+        <label>
+          <input type="radio" name="language" value="mr" checked /> <span class="lang-label">मराठी</span>
+        </label>
+      </section>
+    </div>
+
+  <main class="container">
+    <div class="info-card">
+      <div class="card-image">
+      <img src="temple.png" alt="Temple Officer" style="width:20%; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    </div>
+      <h2 id="templeHeader">आपल्या मंदिरातील निर्माल्याचे संकलन करावयाचे असल्यास कृपया खाली दिलेल्या संबंधित अधिकाऱ्याशी संपर्क साधा.</h2>
+      <div style="overflow-x:auto;">
+        <table class="info-table">
+          <tr>
+            <th id="lblSrNo">क्रमांक</th>
+            <th id="lblDriverName">वाहकाचे नाव</th>
+            <th id="lblDriverMobile">वाहकाचा मोबाईल क्रमांक</th>
+            <th id="lblVehicleType">वाहनाचा प्रकार</th>
+            <th id="lblVehicleNumber">वाहन क्रमांक</th>
+          </tr>
+          <tr>
+            <td id="srNo">१</td>
+            <td id="driverName">श्री. शिवहरी वाघमारे</td>
+            <td id="driverMobile">७४९९०९५५९०</td>
+            <td id="vehicleType">टाटा-९१२ टिपर</td>
+            <td id="vehicleNumber">एमएच २० जीसी ७९४३</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="awareness">
+  <div class="awareness-content">
+    <div class="awareness-text">
+      <h3 id="awarenessTitle">पर्यावरण उपक्रम</h3>
+      <p id="awarenessText">
+        स्वच्छ आणि हरित वातावरण प्रोत्साहित करण्यासाठी आम्ही पवित्र मंदिर निर्माल्याला कंपोस्टमध्ये रूपांतरित करतो.
+      </p>
+    </div>
+
+    <div class="awareness-image">
+      <img src="compost.png" alt="Eco Initiative Photo" />
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-column">
+        <h3 id="visionTitle">उद्देश</h3>
+        <p id="visionText">स्वच्छ आणि शाश्वत छत्रपती संभाजीनगर घडविण्याच्या बांधिलकीतून, छत्रपती संभाजीनगर महानगरपालिकेने देवस्थान कचरा व्यवस्थापन उपक्रम सुरू केला आहे. या उपक्रमांतर्गत मंदिरातील नैवेद्य, पुष्पहार, आणि इतर कचऱ्याचे योग्य संकलन, वर्गीकरण व पर्यावरणपूरक विल्हेवाट लावली जाते, ज्यामुळे स्वच्छता, पर्यावरण संवर्धन आणि जबाबदार नागरिक सहभागाला प्रोत्साहन मिळते.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3 id="footerAddressTitle">पत्ता</h3>
+        <p id="footerAddressText">
+          छत्रपती संभाजीनगर महापालिका,
+          मुख्य इमारत, टाउन हॉल,
+          मुख्य पोस्ट ऑफिसच्या मागे,
+          छत्रपती संभाजी नगर, महाराष्ट्र, भारत, ४३१००१
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 id="footerConnectTitle">संपर्क साधा</h3>
+        <div class="social-links">
+          <a id="fbLink" class="social-link" href="https://www.facebook.com/profile.php?id=61551631623144" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07A10 10 0 1 0 10.5 21.95V14.9h-2.3v-2.8h2.3V9.85c0-2.3 1.36-3.6 3.45-3.6.99 0 2.02.18 2.02.18v2.2h-1.14c-1.13 0-1.48.7-1.48 1.43v1.74h2.52l-.4 2.8h-2.12v7.05A10 10 0 0 0 22 12.07Z"/></svg>
+          </a>
+
+          <a id="ytLink" class="social-link" href="https://m.youtube.com/channel/UCfty7aRYvcL3evtdIVytYUg" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C17.7 2.7 12 2.7 12 2.7s-5.7 0-8.6.2c-.4 0-1.3.1-2.1 1C.7 4.6.5 6.2.5 6.2S.2 8 .2 9.8v1.5c0 1.8.3 3.6.3 3.6s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.1 7.3.2 7.3.2s5.7 0 8.6-.2c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.8.2-3.6V9.8c0-1.8-.2-3.6-.2-3.6zM9.8 15.1V8.6l6.2 3.2-6.2 3.3z"/></svg>
+          </a>
+
+          <a id="igLink" class="social-link" href="https://www.instagram.com/csmcmahapalika?igsh=MTQ0dXdrYjRoc2x6Ng==" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6-2.6a1.2 1.2 0 1 0 1.2 1.2A1.2 1.2 0 0 0 18 5.6z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Chhatrapati Sambhajinagar Municipal Corporation",
+        deptLine: "Solid Waste Management Department",
+        subtitle: "Sustainable handling of temple waste like flowers, leaves, and offerings",
+        templateHeader: "🌿 Temple Solid Waste Management 🌿",
+        templeHeader: "If you wish to have temple nirmalya collected from your location, please contact the concerned officer listed below",
+        lblSrNo: "Sr. No",
+        lblDriverName: "Driver Name",
+        lblDriverMobile: "Driver Mobile No.",
+        lblVehicleType: "Vehicle Type",
+        lblVehicleNumber: "Vehicle Number",
+        srNo: "1",
+        driverName: "Shri. Shivahari Waghmare",
+        driverMobile: "7499095590",
+        vehicleType: "Tata-912 Tipper",
+        vehicleNumber: "MH20 GC 7943",
+        awarenessTitle: "Eco Initiative",
+        awarenessText: "We convert the sacred temple Nirmalya into compost promoting a clean and green environment 🌼",
+        visionTitle: "Purpose",
+        visionText: "Committed to creating a cleaner and more sustainable Chhatrapati Sambhajinagar, the Chhatrapati Sambhajinagar Municipal Corporation has launched a Temple Waste Management Initiative that ensures proper collection, segregation, and eco-friendly disposal of temple offerings and other waste — fostering hygiene, environmental protection, and responsible community participation.",
+        footerAddressTitle: "Address",
+        footerAddressText: "Chhatrapati Sambhajinagar Municipal Corporation, Main Building, Town Hall, behind Head Post Office, Chhatrapati Sambhaji Nagar, Maharashtra, India, 431001",
+        footerConnectTitle: "Connect with Us",
+        increaseBtn: "A+",
+        decreaseBtn: "A-"
+      },
+      mr: {
+        title: "छत्रपती संभाजीनगर महानगरपालिका",
+        deptLine: "घनकचरा व्यवस्थापन विभाग",
+        subtitle: "फुलं, पाने आणि नैवेद्य यांसारख्या मंदिर कचऱ्याचे शाश्वत व्यवस्थापन",
+        templateHeader: "🌿 मंदिर निर्माल्य व्यवस्थापन 🌿",
+        templeHeader: "आपल्या मंदिरातील निर्माल्याचे संकलन करावयाचे असल्यास कृपया खाली दिलेल्या संबंधित अधिकाऱ्याशी संपर्क साधा.",
+        lblSrNo: "क्रमांक",
+        lblDriverName: "वाहकाचे नाव",
+        lblDriverMobile: "वाहकाचा मोबाईल क्रमांक",
+        lblVehicleType: "वाहनाचा प्रकार",
+        lblVehicleNumber: "वाहन क्रमांक",
+        srNo: "१",
+        driverName: "श्री. शिवहरी वाघमारे",
+        driverMobile: "७४९९०९५५९०",
+        vehicleType: "टाटा-९१२ टिपर",
+        vehicleNumber: "एमएच २० जीसी ७९४३",
+        awarenessTitle: "पर्यावरण उपक्रम",
+        awarenessText: "स्वच्छ आणि हरित वातावरण प्रोत्साहित करण्यासाठी आम्ही पवित्र मंदिर निर्माल्याला कंपोस्टमध्ये रूपांतरित करतो.",
+        visionTitle: "उद्देश",
+        visionText: "स्वच्छ आणि शाश्वत छत्रपती संभाजीनगर घडविण्याच्या बांधिलकीतून, छत्रपती संभाजीनगर महानगरपालिकेने देवस्थान कचरा व्यवस्थापन उपक्रम सुरू केला आहे. या उपक्रमांतर्गत मंदिरातील नैवेद्य, पुष्पहार, आणि इतर कचऱ्याचे योग्य संकलन, वर्गीकरण व पर्यावरणपूरक विल्हेवाट लावली जाते, ज्यामुळे स्वच्छता, पर्यावरण संवर्धन आणि जबाबदार नागरिक सहभागाला प्रोत्साहन मिळते.",
+        footerAddressTitle: "पत्ता",
+        footerAddressText: "छत्रपती संभाजीनगर महापालिका, मुख्य इमारत, टाउन हॉल , मुख्य पोस्ट ऑफिसच्या मागे, छत्रपती संभाजी नगर, महाराष्ट्र, भारत, ४३१००१",
+        footerConnectTitle: "संपर्क साधा",
+        increaseBtn: "अ+",
+        decreaseBtn: "अ-"
+      }
+    };
+
+    // Default language set to Marathi on page load
+    window.addEventListener("DOMContentLoaded", () => {
+      const lang = "mr";
+      const t = translations[lang];
+      for (const key in t) {
+        const el = document.getElementById(key);
+        if (el) el.textContent = t[key];
+      }
+      document.getElementById("increaseBtn").textContent = t.increaseBtn;
+      document.getElementById("decreaseBtn").textContent = t.decreaseBtn;
+      document.querySelector('input[value="mr"]').checked = true;
+    });
+
+    // Language switcher
+    document.querySelectorAll('input[name="language"]').forEach(radio => {
+      radio.addEventListener("change", e => {
+        const lang = e.target.value;
+        const t = translations[lang];
+        for (const key in t) {
+          const el = document.getElementById(key);
+          if (el) el.textContent = t[key];
+        }
+        document.getElementById("increaseBtn").textContent = t.increaseBtn;
+        document.getElementById("decreaseBtn").textContent = t.decreaseBtn;
+      });
+    });
+
+    // Text size adjustment
+    const increaseBtn = document.getElementById("increaseBtn");
+    const decreaseBtn = document.getElementById("decreaseBtn");
+    let currentSize = 100; // percentage
+
+    increaseBtn.addEventListener("click", () => {
+      if (currentSize < 200) { 
+        currentSize += 10;
+        document.body.style.fontSize = currentSize + "%";
+      }
+    });
+
+    decreaseBtn.addEventListener("click", () => {
+      if (currentSize > 60) { 
+        currentSize -= 10;
+        document.body.style.fontSize = currentSize + "%";
+      }
+    });
+  </script>
+</body>
+</html>
